@@ -47,4 +47,27 @@ describe('romanNumerals', function(){
       expect(romanNumerals(99)).toEqual('XCIX');
     })
   })
+
+  describe('numbers 100-999', function(){
+    it('returns 100 as C', function(){
+      expect(romanNumerals(100)).toEqual('C')
+    })
+
+    it('returns 101 as CI', function(){
+      expect(romanNumerals(101)).toEqual('CI')
+    })
+
+    it('returns 999 as CMXCIX', function(){
+      expect(romanNumerals(999)).toEqual('CMXCIX')
+    })
+
+    it('returns 555 as DLV', function(){
+      expect(romanNumerals(555)).toEqual('DLV')
+    })
+
+    it('returns 209 as DLV', function(){
+      expect(romanNumerals(209)).toEqual('CCIX')
+    })
+
+  });
 })

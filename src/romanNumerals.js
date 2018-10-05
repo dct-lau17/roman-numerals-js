@@ -1,11 +1,14 @@
 const UNITS = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'];
-const TENS = ['X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC']
+const TENS = ['X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'];
+const HUNDREDS = ['C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM'];
 
 function romanNumerals(num){
   if(num < 10){
     return _units(num)
-  }else{
+  }else if(num < 100){
     return _tens(num)
+  }else{
+    return _hundreds(num)
   }
 }
 
@@ -20,7 +23,18 @@ function _tens(num){
   if(!_isDivisible(num, 10)){
     str += _units(num % 10)
   }
-return str
+  return str
+}
+
+function _hundreds(num){
+  var hundreds = Math.floor(num / 100)
+  var str = ''
+  str += HUNDREDS[hundreds - 1]
+  if(!_isDivisible(num, 100)){
+    num % 100 > 9 ? str += _tens(num % 100) : str += _units(num % 100)
+  }
+
+  return str
 }
 
 function _isDivisible(num, divisor){
