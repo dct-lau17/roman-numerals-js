@@ -1,3 +1,3 @@
-function romanNumerals(){
-  return 'I'
+function romanNumerals(number){
+  return 'I'.repeat(number)
 }
