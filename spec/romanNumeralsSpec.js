@@ -25,4 +25,10 @@ describe('romanNumerals', function(){
       expect(romanNumerals(9)).toEqual('IX');
     })
   })
+
+  describe('numbers 10-99', function(){
+    it('returns 10 as X', function(){
+      expect(romanNumerals(10)).toEqual('X');
+    })
+  })
 })
