@@ -68,6 +68,11 @@ describe('romanNumerals', function(){
     it('returns 209 as DLV', function(){
       expect(romanNumerals(209)).toEqual('CCIX')
     })
+  })
 
-  });
+  describe('retruns 1000', function(){
+    it('returns 1000 as M', function(){
+      expect(romanNumerals(1000)).toEqual('M')
+    })
+  })
 })
