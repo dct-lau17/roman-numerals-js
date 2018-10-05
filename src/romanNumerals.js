@@ -14,7 +14,15 @@ function _units(num){
 }
 
 function _tens(num){
-   if(num === 10){
-     return TENS[0]
-   }
+  var tens = Math.floor(num/10)
+  var str = ''
+  str += TENS[tens - 1]
+  if(!_isDivisible(num, 10)){
+    str += _units(num % 10)
+  }
+return str
+}
+
+function _isDivisible(num, divisor){
+  return num % divisor === 0
 }

@@ -30,5 +30,21 @@ describe('romanNumerals', function(){
     it('returns 10 as X', function(){
       expect(romanNumerals(10)).toEqual('X');
     })
+
+    it('returns 25 as XXV', function(){
+      expect(romanNumerals(25)).toEqual('XXV');
+    })
+
+    it('returns 39 as XXXIX', function(){
+      expect(romanNumerals(39)).toEqual('XXXIX');
+    })
+
+    it('returns 50 as L', function(){
+      expect(romanNumerals(50)).toEqual('L');
+    })
+
+    it('returns 50 as L', function(){
+      expect(romanNumerals(99)).toEqual('XCIX');
+    })
   })
 })
