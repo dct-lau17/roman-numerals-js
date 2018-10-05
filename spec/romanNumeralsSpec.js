@@ -1,13 +1,28 @@
 describe('romanNumerals', function(){
-  it('returns 1 as I', function(){
-    expect(romanNumerals(1)).toEqual('I')
-  })
 
-  it('returns 3 as III', function(){
-    expect(romanNumerals(3)).toEqual('III')
-  })
+  describe('numbers 1- 9', function(){
+    it('returns 1 as I', function(){
+      expect(romanNumerals(1)).toEqual('I');
+    })
 
-  it('returns 5 as V', function(){
-    expect(romanNumerals(5)).toEqual('V')
+    it('returns 3 as III', function(){
+      expect(romanNumerals(3)).toEqual('III');
+    })
+
+    it('returns 4 as IV', function(){
+      expect(romanNumerals(4)).toEqual('IV');
+    })
+
+    it('returns 5 as V', function(){
+      expect(romanNumerals(5)).toEqual('V');
+    })
+
+    it('returns 6 as VI', function(){
+      expect(romanNumerals(6)).toEqual('VI');
+    })
+
+    it('returns 9 as IX', function(){
+      expect(romanNumerals(9)).toEqual('IX');
+    })
   })
 })
