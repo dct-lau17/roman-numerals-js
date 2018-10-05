@@ -1,5 +1,13 @@
 describe('romanNumerals', function(){
 
+  it('throws error when input is less than 0', function(){
+    expect(function() {romanNumerals(0)}).toThrowError('number needs to be between 1 and 1000');
+  })
+
+  it('throws error when input is less than 0', function(){
+    expect(function() {romanNumerals(1001)}).toThrowError('number needs to be between 1 and 1000');
+  })
+
   describe('numbers 1- 9', function(){
     it('returns 1 as I', function(){
       expect(romanNumerals(1)).toEqual('I');
@@ -70,7 +78,7 @@ describe('romanNumerals', function(){
     })
   })
 
-  describe('retruns 1000', function(){
+  describe('returns 1000', function(){
     it('returns 1000 as M', function(){
       expect(romanNumerals(1000)).toEqual('M')
     })

@@ -3,7 +3,9 @@ const TENS = ['X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'];
 const HUNDREDS = ['C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM'];
 
 function romanNumerals(num){
-  if (num < 10){
+  if(num <=0 || num > 1000){
+    throw new Error('number needs to be between 1 and 1000');
+  }else if (num < 10){
     return _units(num)
   }else if (num < 100){
     return _tens(num)
